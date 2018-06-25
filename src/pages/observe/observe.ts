@@ -15,6 +15,7 @@ export class ObservePage {
     view: any[] = [700, 400];
   
     // options
+    //needed
     showXAxis = true;
     showYAxis = true;
     gradient = false;
