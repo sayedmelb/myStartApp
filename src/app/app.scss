@@ -14,3 +14,43 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+body,
+mbsc-page>.mbsc-page {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: visible;
+    //background-color: red!important;
+}
+
+.demo-paging,
+.md-paging,
+.md-paging>div,
+.md-paging .md-page {
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.md-paging .md-cont {
+    display: none;
+}
+
+.md-paging .md-selected {
+    display: block;
+}
+
+.md-paging .md-list-cont,
+.md-paging .mbsc-lv-cont {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 auto;
+    -ms-flex: 1 auto;
+    flex: 1 auto;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.md-paging .mbsc-lv-img {
+    border-radius: 2.8em;
+    height: 2.8em;
+}
