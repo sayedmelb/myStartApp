@@ -19,6 +19,9 @@ import { ObservePage } from '../pages/observe/observe';
 //import { Ng2MapModule} from 'ng2-map';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+//import { MusicObservablePage } from '../pages/music-observable/music-observable';
+import { SearchMusicService } from '../service/search-music.servic';
+import { MusicPage } from '../pages/music/music';
 //import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -30,7 +33,10 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     HomePage,
     TabsPage,
     PromPage,
-    ObservePage
+    ObservePage,
+    MusicPage
+    //,
+    //MusicObservablePage
   ],
   imports: [ 
     MbscModule, 
@@ -52,12 +58,16 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     HomePage,
     TabsPage,
     PromPage,
-    ObservePage
+    ObservePage,
+    MusicPage
+    //,
+   // MusicObservablePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    SearchService ,
+    SearchService,
+    SearchMusicService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
