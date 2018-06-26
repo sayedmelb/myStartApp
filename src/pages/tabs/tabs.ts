@@ -17,7 +17,6 @@ export class TabsPage {
   tab4Root = PromPage;
   tab5Root = ObservePage;
 
-
   constructor() {
 
   }
