@@ -1,0 +1,36 @@
+test music
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Observable using itunes</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="search"
+               class="form-control"
+               placeholder="Enter search string"
+              [formControl] = "searchField"> 
+      </div>
+      <!-- <button class="btn btn-primary"
+              (click)="doSearch(search.value)"> 
+              Search
+      </button> -->
+    </form>
+    <div class="text-center">
+      <p class="lead" *ngIf="loading">Loading..</p>
+    </div>
+    <ul class="list-group">
+      <li class="list-group-item"
+          *ngFor="let track of results | async">
+        <img src="{{track.link}}">
+        <a target="_blank"
+           href="{{track.thumbnail}}">{{ track.track }}
+        </a>
+      </li>
+    </ul>
+  </ion-content>

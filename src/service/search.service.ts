@@ -12,7 +12,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
 
-class SearchItem {
+export class SearchItem {
     constructor(public track: string,
                 public artist: string,
                 public thumbnail: string,
