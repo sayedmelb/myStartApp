@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { MapPage } from '../pages/map/map';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
@@ -16,16 +16,14 @@ import { HttpModule } from '@angular/http';
 import { PromPage } from '../pages/prom/prom';
 import { SearchService } from '../service/search.service';
 import { ObservePage } from '../pages/observe/observe';
-//import { Ng2MapModule} from 'ng2-map';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { NguiMapModule} from '@ngui/map';
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    MapPage,
     ContactPage,
     HomePage,
     TabsPage,
@@ -41,13 +39,13 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     ReactiveFormsModule,
     FormsModule,
     NgxChartsModule,
-    BrowserAnimationsModule
-    //Ng2MapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBdVpB2v1d3nRmNMRN5MAGHQtPx1EpyCRc'})
+    BrowserAnimationsModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBZ2YOJ8KI5qZERdDJVumciKredgdKRU5Q'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    MapPage,
     ContactPage,
     HomePage,
     TabsPage,

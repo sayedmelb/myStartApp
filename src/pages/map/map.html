@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Your location
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-buttons text-center>
+      <button ion-button (click)="positions = getRandomMarkers()">Show Random Markers</button>
+      <button ion-button (click)="showMarkersFromObservable()">Show Random Markers From Observable</button>
+    </ion-buttons>
+  <ngui-map class="mapbox" zoom="14" center="Brampton, Canada">
+    <marker *ngFor="let pos of positions" [position]="pos"></marker>
+  </ngui-map>
+</ion-content>

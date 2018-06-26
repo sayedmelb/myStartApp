@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {HttpModule, Http, URLSearchParams, Headers, RequestOptions} from '@angular/http';
+import { Http, URLSearchParams, Headers, RequestOptions} from '@angular/http';
 
 @Component({
     selector: 'page-home',
