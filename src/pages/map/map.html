@@ -7,11 +7,11 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-buttons text-center>
-      <button ion-button (click)="positions = getRandomMarkers()">Show Random Markers</button>
-      <button ion-button (click)="showMarkersFromObservable()">Show Random Markers From Observable</button>
-    </ion-buttons>
-  <ngui-map class="mapbox" zoom="14" center="Brampton, Canada">
+  <ion-buttons text-center>
+    <button ion-button (click)="positions = getRandomMarkers()">Show Random Markers</button>
+    <button ion-button (click)="showMarkersFromObservable()">Show Random Markers From Observable</button>
+  </ion-buttons>
+  <ngui-map class="mapbox" zoom="4" center="Alice Springs, Australia">
     <marker *ngFor="let pos of positions" [position]="pos"></marker>
   </ngui-map>
 </ion-content>

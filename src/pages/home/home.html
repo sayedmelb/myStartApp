@@ -1,22 +1,52 @@
-<!-- <ion-header>
+<ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <!-- <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p> -->
-  <!-- <ion-item>
-    <ion-label>Birthday</ion-label>
-    <ion-input [(ngModel)]="myBirthday" mbsc-date></ion-input>
-</ion-item>
-</ion-content>  -->
-<div>Test</div>
+  <mbsc-form>
+    <mbsc-button color="primary" (click)="doGET()">GET</mbsc-button>
+    <mbsc-button color="primary" (click)="doGETAsPromise()">As Promise</mbsc-button>
+    <mbsc-button color="warning" (click)="doGETAsObservableError()">Error as Observable</mbsc-button>
+    <mbsc-button color="primary" (click)="doGETWithHeaders()">OBSERVABLE With Headers</mbsc-button>
+  </mbsc-form>
+  <!-- <pre>{{myform.value | json}}</pre> -->
+
+  <!-- <form [formGroup]="myform">
+
+    <fieldset formGroupName="name">
+      <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" formControlName="firstName" required>
+      </div>
+
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName" required>
+      </div>
+    </fieldset>
+
+
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email" required>
+    </div>
+
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" class="form-control" formControlName="password" required>
+    </div>
+
+    <div class="form-group">
+      <label>Language</label>
+      <select class="form-control" formControlName="language">
+        <option value="">Please select a language</option>
+        <option *ngFor="let lang of langs" [value]="lang">{{lang}}
+        </option>
+      </select>
+    </div>
+
+    <pre>{{myform.value | json}}</pre>
+  </form> -->
+</ion-content>

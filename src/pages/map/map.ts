@@ -19,8 +19,8 @@ export class MapPage {
 
     let positions = [];
     for (let i = 0 ; i < 9; i++) {
-      randomLat = Math.random() * (43.7399 - 43.7300) + 43.7300;
-      randomLng = Math.random() * (-79.7600 - -79.7699) + -79.7699;
+      randomLat = Math.random() * (-35 - -36.7) + -36.7;
+      randomLng = Math.random() * (143.5 - 142) + 143;
       positions.push([randomLat, randomLng]);
     }
     return positions;
