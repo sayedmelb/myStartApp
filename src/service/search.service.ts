@@ -6,13 +6,13 @@ import 'rxjs/add/operator/distinctUntilChanged';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/do';
 
-class SearchItem {
-  constructor(public track: string,
-    public artist: string,
-    public thumbnail: string,
-    public link: string,
-    public artistId: string) {
-  }
+export class SearchItem {
+    constructor(public track: string,
+                public artist: string,
+                public thumbnail: string,
+                public link: string,
+                public artistId: string) {
+    }
 }
 
 @Injectable()
@@ -29,12 +29,6 @@ export class SearchService {
   search(term: string) {
     let promise = new Promise((resolve, reject) => {
       let apiURL = `${this.apiRoot}?term=${term}&media=music&limit=20`;
-      //let headers: Headers = new Headers();
-      // headers.append('Access-Control-Allow-Origin', '*');
-      //let opts: RequestOptions = new RequestOptions();
-      //opts.headers = headers;
-      // let
-      //this.http.get(apiURL,opts)
       this.http.get(apiURL)
         .toPromise()
         .then(

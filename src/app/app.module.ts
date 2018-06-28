@@ -21,6 +21,8 @@ import { ObservePage } from '../pages/observe/observe';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { NguiMapModule} from '@ngui/map';
+import { SearchMusicService } from '../service/search-music.servic';
+import { MusicPage } from '../pages/music/music';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { NguiMapModule} from '@ngui/map';
     PromPage,
     ObservePage,
     LineChartPage,
-    PieChartPage
+    PieChartPage,
+    MusicPage
   ],
   imports: [ 
     MbscModule, 
@@ -56,12 +59,14 @@ import { NguiMapModule} from '@ngui/map';
     PromPage,
     ObservePage,
     LineChartPage,
-    PieChartPage
+    PieChartPage,
+    MusicPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    SearchService ,
+    SearchService,
+    SearchMusicService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
