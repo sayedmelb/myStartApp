@@ -5,10 +5,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { AboutPage } from '../pages/about/about';
+import { MapPage } from '../pages/map/map';
 import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
+import { LineChartPage } from '../pages/line-chart/line-chart';
+import { PieChartPage } from '../pages/pie-chart/pie-chart';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,27 +18,24 @@ import { HttpModule } from '@angular/http';
 import { PromPage } from '../pages/prom/prom';
 import { SearchService } from '../service/search.service';
 import { ObservePage } from '../pages/observe/observe';
-//import { Ng2MapModule} from 'ng2-map';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-//import { MusicObservablePage } from '../pages/music-observable/music-observable';
+import { NguiMapModule} from '@ngui/map';
 import { SearchMusicService } from '../service/search-music.servic';
 import { MusicPage } from '../pages/music/music';
-//import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 @NgModule({
   declarations: [
     MyApp,
-    AboutPage,
+    MapPage,
     ContactPage,
     HomePage,
     TabsPage,
     PromPage,
     ObservePage,
+    LineChartPage,
+    PieChartPage,
     MusicPage
-    //,
-    //MusicObservablePage
   ],
   imports: [ 
     MbscModule, 
@@ -47,21 +46,21 @@ import { MusicPage } from '../pages/music/music';
     ReactiveFormsModule,
     FormsModule,
     NgxChartsModule,
-    BrowserAnimationsModule
-    //Ng2MapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBdVpB2v1d3nRmNMRN5MAGHQtPx1EpyCRc'})
+    BrowserAnimationsModule,
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyBZ2YOJ8KI5qZERdDJVumciKredgdKRU5Q'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    AboutPage,
+    MapPage,
     ContactPage,
     HomePage,
     TabsPage,
     PromPage,
     ObservePage,
+    LineChartPage,
+    PieChartPage,
     MusicPage
-    //,
-   // MusicObservablePage
   ],
   providers: [
     StatusBar,
