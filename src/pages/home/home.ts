@@ -15,12 +15,10 @@ export class HomePage {
   doGET() {
     console.log("GET");
     let url = `${this.apiRoot}/get`;
-    //let url = `${this.apiRoot}`;
     let search = new URLSearchParams();
     search.set('foo', 'moo');
     search.set('limit', '25');
     this.http.get(url, { search }).subscribe(res => console.log(res.json()));
-    //this.http.get(url).subscribe(res => console.log(res.json()));
   }
 
   doPOST() {

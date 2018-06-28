@@ -1,45 +1,22 @@
-<!--
-  Generated template for the PromPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
     <ion-title>Promise & Observable</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
 <ion-content padding>
-  <form class="form-inline">
-    <div class="form-group">
-      <input type="search"
-             class="form-control"
-             placeholder="Enter search string"
-             #search> 
-    </div>
-    <button class="btn btn-primary"
-            (click)="doSearch(search.value)"> 
-            Search
-    </button>
-  </form>
+  <ion-searchbar #search [showCancelButton]="shouldShowCancel" placeholder="Enter to search for an itune song">
+  </ion-searchbar>
+  <button ion-button class="btn btn-primary" (click)="doSearch(search.value)">
+    Search
+  </button>
   <div class="text-center">
     <p class="lead" *ngIf="loading">Loading..</p>
   </div>
-  <!-- <ul>
-    <li *ngFor="let track of itunes.results">
-      {{track.trackName}}
-    </li>
-  </ul> -->
   <ul class="list-group">
-    <li class="list-group-item"
-        *ngFor="let track of itunes.results">
+    <li class="list-group-item" *ngFor="let track of itunes.results">
       <img src="{{track.link}}">
-      <a target="_blank"
-         href="{{track.thumbnail}}">{{ track.track }}
+      <a target="_blank" href="{{track.thumbnail}}">{{ track.track }}
       </a>
     </li>
   </ul>
